@@ -109,5 +109,3 @@ class Engine():
                     self.scoreboard.initialize_stats()
                     self.settings.initialize_game_parameters()
                     self.settings.game_active = True
-            if event.type == pygame.MOUSEBUTTONUP:
-                self.sword.grabbed = False

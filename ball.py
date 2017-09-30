@@ -15,7 +15,7 @@ greenLower = (29, 86, 6)
 greenUpper = (64, 255, 255)
 
 camera = cv2.VideoCapture(0)
-pts = deque(maxlen=64)
+pts = deque(maxlen=10)
 # keep looping
 def getit(_width,_height) :
 	# grab the current frame
@@ -61,8 +61,8 @@ def getit(_width,_height) :
 	if key == ord("q"):
 		return 0
 	camera.release()
-	return(frame,center) 
-"""
+	#return(frame,center) 
+
 	# show the frame to our screen
 	cv2.namedWindow("base-image", cv2.WINDOW_AUTOSIZE)  
 	cv2.namedWindow("result-image", cv2.WINDOW_AUTOSIZE)
@@ -77,7 +77,11 @@ def getit(_width,_height) :
 	cv2.imshow("base-image", frame)
 	
 	cv2.imshow("result-image", mask)
-	"""
+while True:
+	key = cv2.waitKey(1) & 0xFF
+	getit(600,400)
+	if key == ord("q"):
+		break
 	
  
 	# if the 'q' key is pressed, stop the loop
