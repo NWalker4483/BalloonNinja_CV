@@ -65,6 +65,5 @@ class Scoreboard(Sprite):
         self.screen.fill(self.bg_color, self.rect)
         # Draw individual scoring elements
         self.screen.blit(self.popped_image, (self.x_popped_position, self.y_popped_position))
-        self.screen.blit(self.points_image, (self.x_points_position, self.y_points_position))
         self.screen.blit(self.score_image, (self.x_score_position, self.y_score_position))
         self.screen.blit(self.popped_ratio_image, (self.x_ratio_position, self.y_ratio_position))
